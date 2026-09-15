@@ -41,7 +41,8 @@ processResources {
     inputs.property 'version', project.version
 
     filesMatching('META-INF/mods.toml') {
-        expand version: inputs.properties.version
+        // Forge rejects the `+<mc>` build metadata in a Maven version string, so publish the bare mod version.
+        expand version: inputs.properties.version.toString().split('\\+')[0]
     }
 }
 

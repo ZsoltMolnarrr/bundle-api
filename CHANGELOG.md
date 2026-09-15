@@ -1,4 +1,4 @@
-# 1.1.0.001
+# 1.1.0+1.20.1
 
 - Minecraft 1.20.1 port (Fabric + Forge 47). Contents are stored in the stack NBT `Items` list (same layout as the vanilla bundle) instead of a data component.
 - `CustomBundleItem` takes the size multiplier as a constructor argument: `new CustomBundleItem(tag, sizeMultiplier, settings)`.

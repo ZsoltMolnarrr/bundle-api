@@ -10,7 +10,8 @@ architectury {
 
 allprojects {
     group = rootProject.maven_group
-    version = rootProject.mod_version
+    // Game-version ports publish as `<semver>+<mc>` (e.g. `1.1.0+1.20.1`), matching the other port branches.
+    version = rootProject.mod_version + "+" + rootProject.minecraft_version
 }
 
 subprojects {
